@@ -48,7 +48,7 @@
       <visual>
         <origin xyz="0 0 -0.0377"/>
         <geometry>
-          <mesh filename="package://velodyne_description/meshes/VLP16_scan.dae"/>
+          <mesh filename="file://$(find velodyne_description)/meshes/VLP16_scan.dae"/>
         </geometry>
       </visual>
     </link>
@@ -133,6 +133,7 @@
             <frameName>${name}</frameName>
             <min_range>${min_range}</min_range>
             <max_range>${max_range}</max_range>
+            <min_intensity>0.0</min_intensity>
             <gaussianNoise>${noise}</gaussianNoise>
           </plugin>
         </sensor>
